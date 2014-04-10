@@ -14,16 +14,7 @@ app.use(express.logger());
 var whitelist = [
   'http://localhost:4000',
   'https://localhost:4000',
-  'http://social-buttons-server.herokuapp.com',
-  'http://dev.stopwatching.us',
-  'https://dev.stopwatching.us',
-  'http://rally.stopwatching.us',
-  'https://rally.stopwatching.us',
-  'http://2.stopwatching.us',
-  'https://2.stopwatching.us',
-  'http://thedaywefightback.org',
-  'https://thedaywefightback.org',
-  'https://d28jjwuneuxo3n.cloudfront.net'
+  'http://eff-action-center.herokuapp.com/'
 ];
 
 var corsOptions = {
@@ -32,14 +23,6 @@ var corsOptions = {
   }
 };
 
-// Block all hosts not in the whitelist
-//app.use(function (req, res, next) {
-//  if (whitelist.indexOf(req.headers.origin) === -1) {
-//    return res.send({ blocked: true });
-//  }
-//
-//  next();
-//});
 
 // Setup caching headers (works well with cloudfront)
 app.use(function (req, res, next) {
